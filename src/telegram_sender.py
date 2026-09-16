@@ -92,7 +92,7 @@ def send_digest(bot_token: str, chat_id: str, articles: list, generated_at_label
     """Sends the full set of stories, split across multiple messages if
     needed. Returns True only if every chunk was sent successfully."""
     if not articles:
-        text = f"No new updates, sir ({generated_at_label})"
+        text = f"No new relevant updates, sir. ({generated_at_label})."
         return send_telegram_message(bot_token, chat_id, text)
 
     blocks = format_entries(articles)
